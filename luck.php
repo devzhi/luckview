@@ -20,30 +20,32 @@ $jsonData = json_encode($data, true);
     <link rel="stylesheet" href="./dist/css/flat-ui.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-center">模拟应聘大赛现场抽奖</h1>
+<div class="container">
+    <h1 class="text-center">模拟应聘大赛现场抽奖</h1>
 
-        <h2 id="stdid" style="margin-top: 18%" class="text-center">等待开奖</h2>
-        <h2 id="username" class="text-center"></h2>
+    <h2 id="stdid" style="margin-top: 18%" class="text-center">等待开奖</h2>
+    <h2 id="username" class="text-center"></h2>
 
-    </div>
-    <script src="./dist/js/vendor/jquery.min.js"></script>
-    <script src="./dist/js/vendor/video.js"></script>
-    <script src="./dist/js/flat-ui.js"></script>
-    <script src="./js/app.js"></script>
-    <script>
+</div>
+<script src="./dist/js/vendor/jquery.min.js"></script>
+<script src="./dist/js/vendor/video.js"></script>
+<script src="./dist/js/flat-ui.js"></script>
+<script src="./js/app.js"></script>
+<script>
 
-        var jsonData = JSON.parse('<?php echo $jsonData ?>');
-        var len = jsonData.length;
-        
-    $(document).keydown(function(e){
-        if(e.keyCode==32){
-        
-        luck(jsonData,len);
-
+    var jsonData = JSON.parse('<?php echo $jsonData ?>');
+    var len = jsonData.length;
+    var runluck = new Boolean(false);
+    var runsta 
+    $(document).keydown(function (e) {
+        if (e.keyCode == 32) {
+                runsta = setInterval("luck(jsonData, len)", 10);
+        }
+        if (e.keyCode == 13) {
+            clearInterval(runsta);
         }
     })
 
-    </script>
+</script>
 </body>
 </html>

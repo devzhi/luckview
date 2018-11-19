@@ -21,25 +21,25 @@ $database->insert('user', [
 </head>
 
 <body>
-    <div class="container">
-        <div class="card text-center">
-            <img class="card-img-top" src="./img/sdcet.jpg" alt="">
-            <div class="card-body">
-                <h4 class="card-title"><? echo $_POST["name"];?>，报名成功</h4>
-                <p class="card-text">报名成功，请等待开奖。</p>
-                <p class="card-text">欢迎关注 山东电子职业技术学院招办 微信公众号</p>
-            </div>
+<div class="container">
+    <div class="card text-center">
+        <img class="card-img-top" src="./img/sdcet.jpg" alt="">
+        <div class="card-body">
+            <h4 class="card-title"><? echo $_POST["name"]; ?>，报名成功</h4>
+            <p class="card-text">报名成功，请等待开奖。</p>
+            <p class="card-text">欢迎关注 山东电子职业技术学院招办 微信公众号</p>
         </div>
     </div>
-    <script src="./dist/js/vendor/jquery.min.js"></script>
-    <script src="./dist/js/vendor/video.js"></script>
-    <script src="./dist/js/flat-ui.js"></script>
-    <script src="./js/app.js"></script>
-    <script>
-        jQuery(document).ready(function () {
-            setTimeout('Follow()', 3000);
-        });
-    </script>
+</div>
+<script src="./dist/js/vendor/jquery.min.js"></script>
+<script src="./dist/js/vendor/video.js"></script>
+<script src="./dist/js/flat-ui.js"></script>
+<script src="./js/app.js"></script>
+<script>
+    jQuery(document).ready(function () {
+        setTimeout('Follow()', 3000);
+    });
+</script>
 </body>
 
 </html>
