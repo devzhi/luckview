@@ -4,10 +4,10 @@ require 'config.php';
 $data = $database->select('user', [
     // 'id',
     'username',
-    'stdid'
+    'stdid',
 ]);
 
-$jsonData = json_encode($data,TRUE);
+$jsonData = json_encode($data, true);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +23,8 @@ $jsonData = json_encode($data,TRUE);
     <div class="container">
         <h1 class="text-center">模拟应聘大赛现场抽奖</h1>
 
-        <h2 id="stdid" style="margin-top: 18%" class="text-center">J1800253</h2>
-        <h2 id="username" class="text-center">谢昆昆</ h2>
+        <h2 id="stdid" style="margin-top: 18%" class="text-center">等待开奖</h2>
+        <h2 id="username" class="text-center"></h2>
 
     </div>
     <script src="./dist/js/vendor/jquery.min.js"></script>
@@ -33,15 +33,17 @@ $jsonData = json_encode($data,TRUE);
     <script src="./js/app.js"></script>
     <script>
 
-    $(function () {
-        var jsonData = JSON.parse('<?php echo $jsonData?>');
+        var jsonData = JSON.parse('<?php echo $jsonData ?>');
         var len = jsonData.length;
-        var a = window.random(0,len);
-        var name = jsonData[a].username;
-        var stdid = jsonData[a].stdid;
-        window.changeluck(name,stdid);
-    });
-    
+        
+    $(document).keydown(function(e){
+        if(e.keyCode==32){
+        
+        luck(jsonData,len);
+
+        }
+    })
+
     </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-function Follow(){
+﻿function Follow() {
     window.location = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3NjUwMzM2Nw==&scene=126#wechat_redirect";
 }
 // function isName(obj) {
@@ -14,12 +14,18 @@ function Follow(){
 //     }
 // }v
 
-function random(min,max) 
-{
+function random(min, max) {
     return Math.floor(min + Math.random() * (max - min));
 }
 
-function changeluck(name,stdid) {
+function changeluck(name, stdid) {
     $("#stdid").text(stdid);
     $("#username").text(name);
+}
+
+function luck(jsonData,len) {
+        var a = window.random(0, len);
+        var name = jsonData[a].username;
+        var stdid = jsonData[a].stdid;
+        window.changeluck(name, stdid);
 }
