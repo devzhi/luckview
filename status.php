@@ -41,13 +41,13 @@ if (!$database->has("user", [
         <div class="card-body">
             <h4 class="card-title"><?echo $status; ?></h4>
             <p class="card-text">报名成功，请等待开奖。</p>
-            <p class="card-text">欢迎关注 山东电子职业技术学院招办 微信公众号</p>
+            <p class="card-text">欢迎关注<b>山东电子职业技术学院招办</b>微信公众号</p>
         </div>
     </div>
 </div>
-<script src="./dist/js/vendor/jquery.min.js"></script>
-<script src="./dist/js/vendor/video.js"></script>
-<script src="./dist/js/flat-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/vendor/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/vendor/video.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.js"></script>
 <script src="./js/app.js"></script>
 <script>
     jQuery(document).ready(function () {
