@@ -13,10 +13,16 @@
 ## 快速开始
 
 1. 克隆这个项目
+
 2. 导入`db.sql`到你的MySQL数据库
+
 3. 执行`composer install`
+
 4. 配置`config.php`中的数据库设置
+
 5. 修改`control.html、luck.php`中的websocket服务器地址
+
+*使用本项目需要一些基本的Html/PHP/JavaScript基础*
 
 ## 致谢
 
