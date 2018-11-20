@@ -51,7 +51,7 @@ if (!$database->has("user", [
 <script src="./js/app.js"></script>
 <script>
     jQuery(document).ready(function () {
-        setTimeout('Follow()', 3000);
+        setTimeout('Follow()', 2000);
     });
 </script>
 </body>

@@ -24,17 +24,3 @@ function luck(jsonData, len) {
     var stdid = jsonData[a].class;
     window.changeluck(name, stdid);
 }
-
-// function isName(obj) {
-//     reg=/^([\\u4e00-\\u9fa5]{1,20}|[a-zA-Z\\.\\s]{1,20})$/;
-//     if (reg.test(obj)) {
-//         console.log("Name匹配失败");
-//     }
-// }
-//  ^[A-Z][1][5-8][0][0-9]+{8}
-// function isStdId(obj){
-//     reg=/^[A-Z]\d{7}$/;
-//     if (reg.test(obj)) {
-//         console.log("ID匹配失败");
-//     }
-// }v

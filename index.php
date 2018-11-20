@@ -47,9 +47,7 @@ var v = new Validator('join',[
     }
 ],function(obj,evt){
     if(obj.errors.length>0){
-        console.log("验证失败");
-    }else {
-        console.log("通过验证");
+        alert("请填写正确的信息");
     }
 });
 </script>
