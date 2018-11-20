@@ -22,8 +22,6 @@
 
 5. 修改`control.html、luck.php`中的websocket服务器地址
 
-*使用本项目需要一些基本的Html/PHP/JavaScript基础*
-
 ## 致谢
 
 为本项目所依赖的以下伟大项目致谢：
