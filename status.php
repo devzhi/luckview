@@ -1,12 +1,26 @@
 <?php
 require 'config.php';
 
-//保存到数据库
+//接收POST数据
+$name = $_POST["name"];
+$class = $_POST["class"];
 
-$database->insert('user', [
-    'username' => $_POST["name"],
-    'stdid' => $_POST["stdid"]
-]);
+//验证是否已报名,如果未报名则添加到数据库中
+
+if (!$database->has("user", [
+    "AND" => [
+        "username" => $name,
+        "class" => $class,
+    ],
+])) {
+    $database->insert('user', [
+        'username' => $name,
+        'class' => $class,
+    ]);
+    $status =  $name."，报名成功";
+}else {
+    $status =  $name."，请不要重复报名";
+}
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -25,7 +39,7 @@ $database->insert('user', [
     <div class="card text-center">
         <img class="card-img-top" src="./img/sdcet.jpg" alt="">
         <div class="card-body">
-            <h4 class="card-title"><? echo $_POST["name"]; ?>，报名成功</h4>
+            <h4 class="card-title"><?echo $status; ?></h4>
             <p class="card-text">报名成功，请等待开奖。</p>
             <p class="card-text">欢迎关注 山东电子职业技术学院招办 微信公众号</p>
         </div>

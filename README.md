@@ -8,4 +8,9 @@
 
 - PHP >= 5.4
 - MySQL >= 5.5
+- Composer
+
+## 快速开始
+
+
 

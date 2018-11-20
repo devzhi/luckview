@@ -2,9 +2,8 @@
 require 'config.php';
 
 $data = $database->select('user', [
-    // 'id',
     'username',
-    'stdid',
+    'class',
 ]);
 
 $jsonData = json_encode($data, true);
@@ -32,17 +31,20 @@ $jsonData = json_encode($data, true);
 <script src="./dist/js/flat-ui.js"></script>
 <script src="./js/app.js"></script>
 <script>
-
     var jsonData = JSON.parse('<?php echo $jsonData ?>');
     var len = jsonData.length;
-    var runluck = new Boolean(false);
-    var runsta 
+    var runsta;
+    var sta = new Boolean(1);
     $(document).keydown(function (e) {
+        //键盘监听，空格开始/停止
         if (e.keyCode == 32) {
-                runsta = setInterval("luck(jsonData, len)", 10);
-        }
-        if (e.keyCode == 13) {
-            clearInterval(runsta);
+            if (sta == 1) {
+                runsta = setInterval("luck(jsonData, len)", 30);
+                sta = 0;
+            } else {
+                clearInterval(runsta);
+                sta = 1;
+            }
         }
     })
 
