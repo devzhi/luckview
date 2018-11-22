@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,25 @@
     <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/css/mdui.min.css">
     <script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.2/js/mdui.min.js"></script>
 </head>
+
 <body class="mdui-theme-layout-indigo mdui-theme-accent-indigo">
     <div class="mdui-container">
         <div class="mdui-typo" style="text-align: center">
             <h1>模拟应聘大赛</h4>
-            <h2>现场抽奖控制系统</h5>
+                <h2>现场抽奖控制系统</h5>
         </div>
         <hr>
             <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-center" onclick="socket.emit('start');">开始/暂停</button>
+            <br>
+            <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent mdui-center" onclick="socket.emit('reload');">重载用户数据</button>
     </div>
     <script src='https://cdn.bootcss.com/socket.io/2.0.3/socket.io.js'></script>
     <script>
-    var socket = io('http://10.10.1.99:3120');
-    socket.on('connect', function(){
-    console.log('connect success');
-    });
+        var socket = io('http://127.0.0.1:3120');
+        socket.on('connect', function () {
+            console.log('connect success');
+        });
     </script>
 </body>
+
 </html>

@@ -13,27 +13,3 @@ $database = new Medoo([
     'username' => 'root',
     'password' => '***REMOVED***'
 ]);
-/*
-// Enjoy
-$database->insert('user', [
-    'username' => '张三',
-    'stuid' => 'J1800101'
-]);
-
-$data = $database->select('account', [
-    'user_name',
-    'email'
-], [
-    'user_id' => 50
-]);
- 
-echo json_encode($data);
- 
-// [
-//     {
-//         "user_name" : "foo",
-//         "email" : "foo@bar.com"
-//     }
-// ]
-
-*/  

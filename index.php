@@ -39,11 +39,11 @@ var v = new Validator('join',[
     {
         name: 'name',
         display:"请输入正确的姓名",
-        rules: 'is_chinese|min_length(2)|max_length(5)'
+        rules: 'is_chinese|min_length(2)|max_length(5)|required'
     },{
         name:'class',
         display: "请输入正确的班级",
-        rules: 'min_length(6)|max_length(6)'
+        rules: 'min_length(6)|max_length(6)|required'
     }
 ],function(obj,evt){
     if(obj.errors.length>0){
