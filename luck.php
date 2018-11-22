@@ -26,7 +26,7 @@ $jsonData = json_encode($data, true);
             <img src="./img/qrcode.png" class="img-fluid" alt="">
         </div>
         <div class="col-xs-6">
-            <p id="num" class="text-center text-primary" style="margin-top: 15%">已经有0位小伙伴报名啦！</p>
+            <p id="num" class="text-center text-primary" style="margin-top: 15%">已经有<?php echo $database->count('user'); ?>位小伙伴报名啦！</p>
             <h2 id="stdid" style="margin-top: 30%" class="text-center">等待开奖</h2>
             <h2 id="username" class="text-center"></h2>
         </div>
