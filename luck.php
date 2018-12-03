@@ -76,7 +76,10 @@ $jsonData = json_encode($data, true);
         if (sta == 1) {
             $("#stdid").text("数据加载中...");
             $("#username").text("");
-            jsonData = JSON.parse('<?php echo $jsonData ?>');
+            $.getJSON("http://localhost/json.php",function (json) {
+                jsonData = json;
+                len = json.length;
+            })
             $("#stdid").text("等待开奖");
         }
     });
