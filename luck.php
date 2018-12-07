@@ -81,7 +81,7 @@ $jsonData = json_encode($data, true);
                 len = json.length;
             })
             $("#stdid").text("等待开奖");
-        }
+        }   
     });
 </script>
 </body>

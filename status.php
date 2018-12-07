@@ -3,8 +3,7 @@ require 'config.php';
 require 'push.php';
 //接收POST数据
 $name = $_POST["name"];
-$class = $_POST["class"];
-
+$class = strtoupper($_POST["class"]);
 //验证是否已报名,如果未报名则添加到数据库中
 
 if (!$database->has("user", [
