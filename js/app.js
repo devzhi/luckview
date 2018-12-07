@@ -3,8 +3,6 @@ function Follow() {
     var ua = navigator.userAgent.toLowerCase();
     if (ua.match(/MicroMessenger/i) == "micromessenger") {
         window.location = "https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA3NjUwMzM2Nw==&scene=126#wechat_redirect";
-    } else {
-        window.location = "http://"+document.domain+"/wx.html";
     }
 }
 

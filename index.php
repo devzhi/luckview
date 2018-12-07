@@ -35,6 +35,12 @@ require 'config.php';
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/js/flat-ui.js"></script>
 <script src="./js/app.js"></script>
 <script>
+    $(document).ready(function () {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) != "micromessenger") {
+            window.location = "http://"+document.domain+"/wx.html";
+    }
+    });
 var v = new Validator('join',[
     {
         name: 'name',
