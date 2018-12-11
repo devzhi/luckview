@@ -19,8 +19,10 @@ function changeluck(name, stdid) {
 
 //生成获奖人
 function luck(jsonData, len) {
-    var a = window.random(0, len);
-    var name = jsonData[a].username;
-    var stdid = jsonData[a].class;
+    do {
+        window.k = window.random(0, len);
+    } while (window.lucks.indexOf(window.k) != -1&&window.k.length != window.jsonData.length);
+    var name = jsonData[window.k].username;
+    var stdid = jsonData[window.k].class;
     window.changeluck(name, stdid);
 }

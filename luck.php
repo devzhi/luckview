@@ -43,6 +43,8 @@ $jsonData = json_encode($data, true);
     var len = jsonData.length;
     var runsta;
     var sta = new Boolean(1);
+    var lucks = new Array();
+    var k;
     $(document).keydown(function (e) {
         //键盘监听，空格开始/停止
         if (e.keyCode == 32) {
@@ -52,6 +54,7 @@ $jsonData = json_encode($data, true);
             } else {
                 clearInterval(runsta);
                 sta = 1;
+                lucks.push(k);
             }
         }
     })
@@ -67,6 +70,7 @@ $jsonData = json_encode($data, true);
         } else {
             clearInterval(runsta);
             sta = 1;
+            lucks.push(k);
         }
     });
     socket.on('num', function(num){
