@@ -11,5 +11,5 @@ $database = new Medoo([
     'database_name' => 'bigluck',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '***REMOVED***'
+    'password' => 'Your PassWord'
 ]);
